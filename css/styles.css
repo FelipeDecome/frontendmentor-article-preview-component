@@ -2,12 +2,18 @@
   width: 90%;
   border-radius: 0.8rem;
   overflow: hidden;
-  max-width: 375px;
+  max-width: 34rem;
 
   display: flex;
   flex-direction: column;
 
   background: var(--card-background);
+  box-shadow: 0 3rem 5rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.card__image-wrapper {
+  max-height: 20rem;
+  overflow: hidden;
 }
 
 .card__image {
@@ -15,7 +21,7 @@
 }
 
 .card__content {
-  padding: 3.2rem 3.2rem 0.8rem;
+  padding: 3.2rem 3.2rem 2rem;
 }
 
 .card__content h2 {
@@ -35,6 +41,12 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.6rem 3.2rem;
+
+  transition: all 0.2s;
+}
+
+.share.card__footer {
+  background: var(--very-dark-grayish-blue);
 }
 
 .card__footer-info {
@@ -67,9 +79,59 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+
+.card__footer button,
+.card__footer svg {
+  transition: all 0.2s;
+}
+
+.card__footer button {
   background: var(--light-grayish-blue);
 }
 
-.card__footer button img {
-  width: 50%;
+.card__footer button:hover {
+  background: var(--very-dark-grayish-blue);
+}
+
+.card__footer.share button {
+  background: var(--desaturated-dark-blue);
+}
+
+.card__footer button:hover svg,
+.card__footer.share button svg {
+  fill: var(--light-grayish-blue);
+}
+
+.card__footer.share button:hover {
+  background: var(--grayish-blue);
+}
+
+.card__footer button svg,
+.card__footer.share button:hover svg {
+  fill: var(--very-dark-grayish-blue);
+}
+
+.share .card__footer-share {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.card__footer-share h3 {
+  letter-spacing: 0.4rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+
+  color: var(--grayish-blue);
+}
+
+.card__footer-share img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.share .card__footer-info,
+.card__footer-share {
+  display: none;
 }
