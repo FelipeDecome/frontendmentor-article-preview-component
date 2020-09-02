@@ -1,0 +1,48 @@
+@mixin flex($direction: null, $justify: null, $align: null, $gap: null) {
+  display: flex;
+  @if $direction {
+    flex-direction: $direction;
+  }
+  @if $justify {
+    justify-content: $justify;
+  }
+  @if $align {
+    align-items: $align;
+  }
+  @if $gap {
+    gap: $gap;
+  }
+}
+
+@mixin size($width: null, $max-width: null, $height: null, $max-height: null) {
+  @if $width {
+    width: $width;
+  }
+
+  @if $max-width {
+    max-width: $max-width;
+  }
+
+  @if $height {
+    height: $height;
+  }
+
+  @if $max-height {
+    max-height: $max-height;
+  }
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}

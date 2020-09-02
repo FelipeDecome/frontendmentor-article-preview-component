@@ -1,0 +1,23 @@
+{
+  "name": "frontendmentor-article-preview-component",
+  "version": "1.0.0",
+  "description": "A frontend mentor challenge",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FelipeDecome/frontendmentor-article-preview-component.git"
+  },
+  "author": "Felipe Decome <decome.felipe@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FelipeDecome/frontendmentor-article-preview-component/issues"
+  },
+  "homepage": "https://github.com/FelipeDecome/frontendmentor-article-preview-component#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
