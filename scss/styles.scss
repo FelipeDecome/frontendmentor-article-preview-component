@@ -1,5 +1,6 @@
 @import "./variables";
 @import "./mixins";
+@import "./mixins-cross-browser";
 
 .card {
   overflow: hidden;
@@ -7,9 +8,9 @@
   width: 90%;
   max-width: 34rem;
 
-  border-radius: 0.8rem;
+  @include border-radius(0.8rem);
+  @include box-shadow(0 3rem 5rem 0.5rem rgba(0, 0, 0, 0.1));
   background: $card-background;
-  box-shadow: 0 3rem 5rem 0.5rem rgba(0, 0, 0, 0.1);
 
   .card__image-wrapper {
     @include flex;
@@ -23,7 +24,7 @@
   }
 
   .card__content-wrapper {
-    padding: 3.2rem 3.2rem 0.8rem;
+    padding: 3.2rem 3.2rem 0;
 
     .card__content {
       & > * {
@@ -46,9 +47,15 @@
 
     .card__info {
       @include flex(null, space-between, center);
+      position: relative;
       margin-top: 1.8rem;
+      margin-left: -3.2rem;
 
+      width: calc(100% + 6.4rem);
       height: 6.4rem;
+      padding: 0 3.2rem;
+
+      @include transition(all 0.2s);
 
       .card__info-content {
         @include flex(null, null, null, 1.6rem);
@@ -58,12 +65,12 @@
           width: 3.6rem;
           border: 2px solid $light-grayish-blue;
 
-          border-radius: 50%;
+          @include border-radius(50%);
           cursor: pointer;
-          transition: transform 0.2s;
+          @include transition(transform 0.2s);
 
           &:hover {
-            transform: scale(1.2);
+            @include transform(scale(1.2));
           }
         }
 
@@ -85,39 +92,122 @@
       .card__share {
         .card__share-menu {
           display: none;
+
+          .card__share-heading {
+            letter-spacing: 0.4rem;
+            font-size: 1.4rem;
+            font-weight: 500;
+
+            color: $grayish-blue;
+          }
+
+          .card__share-link {
+            display: flex;
+
+            transition: all 0.2s;
+          }
+          .card__share-icon {
+            fill: $grayish-blue;
+
+            &:hover {
+              fill: $light-grayish-blue;
+            }
+          }
         }
 
         .card__share-button {
           @include flex(null, center, center);
 
           border: 0;
-          width: 3rem;
-          height: 3rem;
+          width: 3.6rem;
+          height: 3.6rem;
 
-          border-radius: 50%;
+          @include border-radius(50%);
           cursor: pointer;
           background: $light-grayish-blue;
 
           &:hover {
-            transform: scale(1.2);
+            @include transform(scale(1.2));
             background: $very-darkgrayish-blue;
 
-            .card__share-icon {
+            .card__share-button-icon {
               fill: $light-grayish-blue;
             }
           }
 
           &,
-          .card__share-icon {
+          .card__share-button-icon {
             transition: all 0.2s;
           }
 
-          .card__share-icon {
+          .card__share-button-icon {
             // ICON POSITION FIX
             margin-top: -2px;
           }
         }
       }
+
+      &.share {
+        background: $very-darkgrayish-blue;
+
+        .card__info-content {
+          display: none;
+        }
+
+        .card__share {
+          @include flex(null, space-between, center);
+
+          width: 100%;
+          .card__share-menu {
+            @include flex;
+            gap: 1.6rem;
+          }
+
+          .card__share-heading,
+          .card__share-link {
+            opacity: 0;
+            animation: fadeIn 0.6s ease;
+            animation-fill-mode: forwards;
+
+            &:nth-child(2) {
+              animation-delay: 0.2s;
+            }
+
+            &:nth-child(3) {
+              animation-delay: 0.4s;
+            }
+
+            &:last-child {
+              animation-delay: 0.6s;
+            }
+          }
+        }
+
+        .card__share-button {
+          background: $desaturated-dark-blue;
+
+          .card__share-button-icon {
+            fill: $light-grayish-blue;
+          }
+
+          &:hover {
+            background: $grayish-blue;
+
+            .card__share-button-icon {
+              fill: $very-darkgrayish-blue;
+            }
+          }
+        }
+      }
     }
+  }
+}
+
+@include keyframes(fadeIn) {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
