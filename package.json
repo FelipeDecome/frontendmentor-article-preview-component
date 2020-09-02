@@ -2,10 +2,11 @@
   "name": "frontendmentor-article-preview-component",
   "version": "1.0.0",
   "description": "A frontend mentor challenge",
-  "main": "index.js",
-  "type": "module",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "node ./server.js"
+    "start": "node ./server.js",
+    "build": "webpack",
+    "prod": "node dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,9 @@
   "homepage": "https://github.com/FelipeDecome/frontendmentor-article-preview-component#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
   }
 }

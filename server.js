@@ -9,4 +9,6 @@ app.get("/", (req, res) => {
   res.sendFile("./public/index.html");
 });
 
-app.listen(PORT);
+app.listen(PORT, () => {
+  console.log(`server listening on port: ${PORT}`);
+});
