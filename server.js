@@ -9,10 +9,4 @@ app.get("/", (req, res) => {
   res.sendFile("./public/index.html");
 });
 
-try {
-  app.listen(PORT, () => {
-    console.log(`Server listening on port ${PORT}`);
-  });
-} catch (e) {
-  console.log(e);
-}
+app.listen(PORT);
