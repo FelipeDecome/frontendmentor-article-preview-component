@@ -20,6 +20,7 @@ The challenge just require a little bit of javascript to show the share options 
 The users should be able to:
 
 [x] View the optimal layout for the component depending on their device's screen size.
+
 [x] See the social media share links when they click the share icon.
 
 ## Giving feedback
