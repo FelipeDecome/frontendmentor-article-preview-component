@@ -1,0 +1,1 @@
+:root{font-size:60%}*{padding:0;margin:0;box-sizing:border-box;outline:0}html,body,#root{width:100vw;height:100vw}body{font:500 1.3rem Manrope}#root{display:flex;flex-direction:column;justify-content:center;align-items:center;background:#ecf2f8}@media(min-width: 700px){:root{font-size:62.5%}}/*# sourceMappingURL=reset.css.map */
