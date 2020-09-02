@@ -4,24 +4,23 @@
 
 ## Welcome! 👋
 
-Thanks for checking my approach in this front-end coding challenge. I'm not completely happy with the code, i still want to refactor it.
+Thanks for checking my solution in this front-end coding challenge.
 
-This challenge is completely free. If you want to try you can find it and other challenges on:
-
-[Frontend Mentor](https://www.frontendmentor.io)
+This challenge is completely free. If you want to try you can find it and other challenges on: [Frontend Mentor](https://www.frontendmentor.io)
 
 ## The challenge
 
-The challenge is to build out this article preview component and get it looking as close to the design as possible.
+This challenge was to build an article preview component and get it looking as close to the design as possible.
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+I could use any tools i prefer to complete the challenge. So i used this oportunity to test my sass skills and im pretty much happy with the result. I still think i need some refactoring.
 
-The only JavaScript you'll need for this challenge is to initiate the share options when someone clicks the share icon.
+The challenge just require a little bit of javascript to show the share options when someone clicks the share icon.
 
+### Goals
 The users should be able to:
 
-[x] View the optimal layout for the component depending on their device's screen size
-[x] See the social media share links when they click the share icon
+[x] View the optimal layout for the component depending on their device's screen size.
+[x] See the social media share links when they click the share icon.
 
 ## Giving feedback
 
