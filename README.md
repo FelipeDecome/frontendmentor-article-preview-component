@@ -6,6 +6,9 @@
 
 Thanks for checking my solution in this front-end coding challenge.
 
+You can check my challenge solution on Frontend Mentor [clicking here](https://www.frontendmentor.io/solutions/mobile-first-layout-using-sass-Gjav4fsYO) <br/>
+And my live preview [clicking here](https://frontendmentor-article-preview-component-orpin.vercel.app/)
+
 This challenge is completely free. If you want to try you can find it and other challenges on: [Frontend Mentor](https://www.frontendmentor.io)
 
 ## The challenge
